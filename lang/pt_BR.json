@@ -1,0 +1,29 @@
+{
+    "#" : "#",
+    "Close": "Fechar",
+    "Actions" : "Ações",
+
+    "Products": "Produtos",
+    "Variations": "Variações",
+
+    "Amount: :value" : "Quantidade: :value",
+
+    "Amt: :value" : "Qtd: :value",
+
+    
+    "Size" : "Tamanho",
+    "Color" : "Cor",
+
+    "Price" : "Preço",
+
+    "Quantity (Stock)" : "Quantidade (Estoque)",
+    
+    "Product - :action" : "Produto - :action",
+
+    "Create": "Cadastrar",
+    "Update": "Atualizar",
+    "Delete": "Deletar",
+
+    "Name": "Nome",
+    "Stock" : "Estoque"
+}

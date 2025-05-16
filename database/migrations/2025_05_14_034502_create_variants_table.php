@@ -11,20 +11,25 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('stock', function (Blueprint $table) {
+        Schema::create('variants', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('variant_id')->constrained();
-            $table->integer('quantity');
+            $table->foreignId('product_id')->constrained();
+            $table->json('config');
+            $table->decimal('price');
             $table->timestamps();
             $table->softDeletes();
         });
+
+        
     }
+
+    
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('stock');
+        Schema::dropIfExists('variants');
     }
 };
