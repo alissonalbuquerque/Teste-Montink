@@ -14,7 +14,7 @@
                 </div>
             @endif   
 
-            <div class="border border-rounded">
+            <div class="border border-rounded px-2">
                 <h1 class="h2 text-muted"> {{ __('Products') }}</h1>
             </div>
 

@@ -34,7 +34,7 @@ class Variant extends Model
     }
 
     public function setConfig(array $config) : void {
-        $this->config = Json::encode(['size'  => 'P', 'color' => 'red']);
+        $this->config = Json::encode($config);
     }
 
     public function config_decode($key = null) {

@@ -23,12 +23,7 @@ class StoreProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'     => ['required', 'string', 'min:1', 'max:255'],
-
-            // 'size'     => ['required', 'string', Rule::in(['P', 'M', 'G', 'GG'])],
-            // 'color'    => ['required', 'string', Rule::in(['red', 'green', 'blue'])],
-            // 'quantity' => ['required', 'integer', 'min:1'],
-            // 'price'    => ['required', 'numeric'],
+            'name' => ['required', 'string', 'min:1', 'max:255']
         ];
     }
 }

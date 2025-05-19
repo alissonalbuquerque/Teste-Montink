@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use App\Models\Product;
 use App\Models\Stock;
 use App\Models\Variant;
@@ -26,19 +27,8 @@ class ProductController extends Controller
     /**
      * Create a newly created resource in storage.
      */
-    public function create()
-    {
-        $sizes  = ['P', 'M', 'G', 'GG'];
-        $colors = [
-            'red'   => 'Vermelho',
-            'green' => 'Verde',
-            'blue'  => 'Azul'
-        ];
-
-        return view('product.create', [
-            'sizes'  => $sizes,
-            'colors' => $colors
-        ]);
+    public function create() {
+        return view('product.create');
     }
 
     /**
@@ -48,7 +38,7 @@ class ProductController extends Controller
     {
         $product = Product::create($request->all());
     
-        return Redirect::route('product.edit', ['id' => $product->id])->with('success', 'Produto cadastrado com sucesso!');
+        return Redirect::route('product.edit', ['id' => $product->id])->with('success', __(':resource registered successfully!', ['resource' => __('Product')]));
     }
 
     /**
@@ -58,16 +48,7 @@ class ProductController extends Controller
     {
         $model = Product::findOrFail($id);
 
-        $sizes  = ['P', 'M', 'G', 'GG'];
-        $colors = [
-            'red'   => 'Vermelho',
-            'green' => 'Verde',
-            'blue'  => 'Azul'
-        ];
-
         return view('product.update', [
-            'sizes'  => $sizes,
-            'colors' => $colors,
             'model'  => $model,
         ]);
     }
@@ -75,9 +56,13 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateProductRequest $request, string $id)
     {
-        //
+        $model = Product::findOrFail($id);
+        $model->fill($request->all());
+        $model->save();
+
+        return Redirect::route('product.edit', ['id' => $model->id])->with('success', __(':resource updated successfully!', ['resource' => __('Product')]));
     }
 
     /**

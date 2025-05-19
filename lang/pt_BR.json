@@ -5,6 +5,7 @@
 
     "Products": "Produtos",
     "Variations": "Variações",
+    "Variant": "Variação",
 
     "Amount: :value" : "Quantidade: :value",
 
@@ -23,7 +24,15 @@
     "Create": "Cadastrar",
     "Update": "Atualizar",
     "Delete": "Deletar",
+    "Back": "Voltar",
 
     "Name": "Nome",
-    "Stock" : "Estoque"
+    "Stock" : "Estoque",
+
+    "Product" : "Produto",
+
+    "Variant - :action" : "Variação - :action",
+
+    ":resource registered successfully!" : ":resource cadastrado com sucesso!",
+    ":resource updated successfully!" : ":resource atualizado com sucesso!"
 }

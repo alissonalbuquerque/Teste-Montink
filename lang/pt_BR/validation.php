@@ -56,6 +56,9 @@ return [
         'name'       => 'Nome',
         'email'      => 'E-mail',
         'status'     => 'Status',
+
+        'price'      => 'Preço',
+        'quantity'   => 'Quantidade',
         
         'start_date' => 'Data de Início',
         'end_date'   => 'Data de Fim',
