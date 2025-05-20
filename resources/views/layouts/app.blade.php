@@ -18,6 +18,17 @@
 
     <main class="container d-flex justify-content-center align-items-center">
         <div class="w-75 mt-5">
+
+            @if(session('success'))
+                <div class="my-2">
+                    <div class="alert alert-success d-flex align-items-center" role="alert">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span class="mx-2"> {{ session('success') }} </span>
+                        <button type="button" class="btn-close text-end" data-bs-dismiss="alert" aria-label="close"></button>
+                    </div>
+                </div>
+            @endif
+            
             {{ $main }}
         </div>
     </main>

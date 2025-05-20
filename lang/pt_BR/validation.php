@@ -53,20 +53,21 @@ return [
     // Message By Input
     
     'attributes' => [
-        'name'       => 'Nome',
-        'email'      => 'E-mail',
-        'status'     => 'Status',
-
-        'price'      => 'Preço',
-        'quantity'   => 'Quantidade',
-        
-        'start_date' => 'Data de Início',
-        'end_date'   => 'Data de Fim',
-
-        'created_at' => 'Criado em',
-        'updated_at' => 'Atualizado em',
-
-        'password' => 'Senha',
+        'name'                  => 'Nome',
+        'email'                 => 'E-mail',
+        'status'                => 'Status',
+        'price'                 => 'Preço',
+        'quantity'              => 'Quantidade',
+        'minimal_value'         => 'Valor Minímo',
+        'percentage'            => 'Percentual',
+        'code'                  => 'Código',
+        'status'                => 'Status',
+        'active'                => 'Ativo',
+        'start_date'            => 'Data de Início',
+        'end_date'              => 'Data de Fim',
+        'created_at'            => 'Criado em',
+        'updated_at'            => 'Atualizado em',
+        'password'              => 'Senha',
         'password_confirmation' => 'Confirmação de senha',
     ],
 

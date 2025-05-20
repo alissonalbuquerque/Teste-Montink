@@ -6,16 +6,6 @@
             <h1 class="h2 text-muted"> {{ __('Variant - :action', ['action' => __('Update')]) }}</h1>
         </div>
 
-        @if(session('success'))
-            <div class="my-4">
-                <div class="alert alert-success d-flex align-items-center" role="alert">
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span class="mx-2"> {{ session('success') }} </span>
-                    <button type="button" class="btn-close text-end" data-bs-dismiss="alert" aria-label="close"></button>
-                </div>
-            </div>
-        @endif
-
         <div class="border border-rounded my-4 p-4">
 
             <form action="{{route('variant.update', ['id' => $model->id])}}" method="POST">
