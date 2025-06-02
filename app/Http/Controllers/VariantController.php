@@ -6,6 +6,7 @@ use App\Http\Requests\StoreVariantRequest;
 use App\Http\Requests\UpdateVariantStore;
 use App\Models\Stock;
 use App\Models\Variant;
+use Illuminate\Database\Eloquent\Casts\Json;
 use Illuminate\Support\Facades\Redirect;
 
 class VariantController extends Controller
@@ -96,5 +97,15 @@ class VariantController extends Controller
         $model->delete();
 
         return Redirect::route('product.edit', ['id' => $model->product_id])->with('success', 'Variação deletada com sucesso!');
+    }
+
+    /**
+     * Get resource variant
+     */
+    public function findById($id)
+    {
+        $model = Variant::findOrFail($id);
+
+        return Json::encode($model->toArray());
     }
 }

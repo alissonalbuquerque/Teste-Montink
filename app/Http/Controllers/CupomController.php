@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCupomRequest;
 use App\Http\Requests\UpdateCupomRequest;
 use App\Models\Cupom;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
 class CupomController extends Controller
@@ -14,7 +15,7 @@ class CupomController extends Controller
      */
     public function index()
     {
-        $models = Cupom::all();
+        $models = Cupom::orderBy('code')->get();
         
         return view('cupom.index', [
             'models' => $models
@@ -82,5 +83,27 @@ class CupomController extends Controller
         $model->delete();
 
         return Redirect::route('cupom.index')->with('success', 'Cupom deletado com sucesso!');
+    }
+
+    public function recover(Request $request) {
+
+        [$code, $minimal_value] = [
+            $request->post('code'),
+            $request->post('minimal_value')
+        ];
+
+        $model = Cupom::where('code', '=', "{$code}")->first();
+
+        if(is_null($model)) {
+            return [
+                'id' => null,
+                'value' => '0.00',
+            ];
+        } else {
+            return [
+                'id' => $model->id,
+                'value' => $model->discount($minimal_value),
+            ];
+        }
     }
 }

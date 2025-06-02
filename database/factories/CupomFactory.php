@@ -21,7 +21,6 @@ class CupomFactory extends Factory
             'minimal_value' => $this->faker->randomFloat(2, 100, 500),
             'active'        => true,
             'percentage'    => $this->faker->unique()->numberBetween(1, 100)
-            
         ];
     }
 }

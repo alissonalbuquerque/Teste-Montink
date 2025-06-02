@@ -33,6 +33,13 @@ class Variant extends Model
         return $this->belongsTo(Stock::class, 'id', 'variant_id');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<TRelatedModel, $this>
+     */
+    public function product() {
+        return $this->belongsTo(Product::class, 'product_id', 'id');
+    }
+
     public function setConfig(array $config) : void {
         $this->config = Json::encode($config);
     }
@@ -58,5 +65,26 @@ class Variant extends Model
                 'blue'  => 'Azul',
             }      
         );
+    }
+
+    public function toArray() : array
+    {
+        return [
+            'id'         => $this->id,
+            'product_id' => $this->product_id,
+            'price'      => $this->price,
+            'size'       => $this->config_decode('size'),
+            'color'      => $this->fmt_color(),
+            'stock'      => $this->stock->quantity,
+            
+            'format'     => [
+                'price'  => $this->fmt_price()
+            ]
+        ];
+    }
+
+    public function __toString() : string {
+        [$size, $color] = [$this->config_decode('size'), $this->fmt_color()];
+        return "{$size} - {$color}";
     }
 }

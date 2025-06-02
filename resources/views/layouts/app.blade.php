@@ -10,7 +10,9 @@
 
     <title>{{ config('app.name') }} - {{ $title }}</title>
 
-    @vite(['resources/sass/app.scss', 'resources/js/app.js']) <!-- se estiver usando Vite -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     
 </head>
 
@@ -32,6 +34,8 @@
             {{ $main }}
         </div>
     </main>
+
+    @yield('script')
 
 </body>
 

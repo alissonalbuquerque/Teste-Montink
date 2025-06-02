@@ -7,10 +7,16 @@
             <div class="btn-group mb-2">
                 
                 <div class="me-4">
-                    <a class="btn btn-sm btn-outline-primary" href="{{''}}">
-                        <i class="bi bi-cart"></i> {{ __('Cart') }}
+                    <a class="btn btn-sm btn-outline-primary" href="{{route('cart.create')}}">
+                        <i class="bi bi-cart"></i> {{ __('Cart') }} 
+                        @session('products')
+                            <span class="badge text-bg-danger">
+                                {{ collect(session('products'))->count() }}
+                            </span>
+                        @endsession
                     </a>
                 </div>
+                
 
                 <div class="me-4">
                     <a class="btn btn-sm btn-outline-primary" href="{{ route('product.index') }}">

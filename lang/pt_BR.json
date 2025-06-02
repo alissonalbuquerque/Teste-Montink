@@ -17,29 +17,30 @@
     "Price" : "Preço",
 
     "Quantity (Stock)" : "Quantidade (Estoque)",
+    "Units" : "Unidades",
+    "Total" : "Total",
+    "SubTotal" : "SubTotal",
     
-    "Create": "Cadastrar",
-    "Update": "Atualizar",
-    "Delete": "Deletar",
-    "Back": "Voltar",
+    "Create" : "Cadastrar",
+    "Update" : "Atualizar",
+    "Delete" : "Deletar",
+    "Back"   : "Voltar",
+    "Buying" : "Comprando",
+
+    "Product"  : "Produto",
+    "Cupons"   : "Cupons",
+    "Cart"     : "Carrinho",
+    "Add Cart" : "Adicionar ao Carrinho",
 
     "Name": "Nome",
     "Stock" : "Estoque",
 
-    "Product" : "Produto",
-
+    "New :resource" : "Novo :resource",
     ":resource registered successfully!" : ":resource cadastrado com sucesso!",
     ":resource updated successfully!" : ":resource atualizado com sucesso!",
 
-    "New :resource" : "Novo :resource",
-
-    "Cupons" : "Cupons",
-    "Cart" : "Carrinho",
-
     "Code" : "Código",
-
     "Active": "Ativo",
-
     "Percentage" : "Porcentagem",
 
     "Validity Date" : "Data de Validade",
@@ -48,7 +49,29 @@
     "Product - :action" : "Produto - :action",
     "Variant - :action" : "Variação - :action",
     "Cupom - :action"   : "Cupom - :action",
+    "Cart - :action"    : "Carrinho - :action",
 
     "Start Date" : "Data de Início",
-    "End Date" : "Data de Fim"
+    "End Date" : "Data de Fim",
+
+    "Buy" : "Compra",
+
+    "Buy Value" : "Valor da Compra",
+
+    "Product :name" : "Produto :name",
+
+    "Informations" : "Informações",
+
+    "Datas" : "Dados",
+
+    "Frete" : "Frete",
+
+    "Buy E-mail" : "E-mail da Compra",
+
+    "Close :action" : "Fechar :action",
+    "Order" : "Pedido",
+
+    "Cupom (Code)" : "Cupom (Código)",
+
+    "Cupom (Discount)" : "Cupom (Desconto)"
 }

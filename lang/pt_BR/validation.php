@@ -57,6 +57,7 @@ return [
         'email'                 => 'E-mail',
         'status'                => 'Status',
         'price'                 => 'Preço',
+        'units'                 => 'Unidades',
         'quantity'              => 'Quantidade',
         'minimal_value'         => 'Valor Minímo',
         'percentage'            => 'Percentual',

@@ -9,9 +9,11 @@ use App\Models\Stock;
 use App\Models\Variant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
-{
+{   
+    
     /**
      * Display a listing of the resource.
      */

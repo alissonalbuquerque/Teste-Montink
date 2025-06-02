@@ -37,4 +37,8 @@ class Cupom extends Model
     public function fmt_active() : string {
         return $this->active ? 'Sim' : 'Não';
     }
+
+    public function discount(float $value) {
+        return $value >= $this->minimal_value ? ($value * ($this->percentage / 100.00)) : 0.00;
+    }
 }

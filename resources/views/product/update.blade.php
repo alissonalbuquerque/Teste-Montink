@@ -110,14 +110,14 @@
                 <div class="btn-group">
 
                     <div class="mx-1">
-                        <a href="{{ route('product.index') }}" class="btn btn-secondary">
+                        <a href="{{ route('product.index') }}" class="btn btn-outline-secondary">
                             <i class="bi bi-arrow-left-circle"></i> {{ __('Back') }}
                         </a>
                     </div>
 
                     <div class="mx-1">
                         <div class="text-end">
-                            <button class="btn btn-primary" type="button" onclick="document.getElementById('form_product_update').submit()">
+                            <button class="btn btn-outline-primary" type="button" onclick="document.getElementById('form_product_update').submit()">
                                 <i class="bi bi-arrow-clockwise"></i> {{ __('Update') }}
                             </button>
                         </div>

@@ -78,14 +78,14 @@
                     <div class="btn-group">
 
                         <div class="mx-1">
-                            <a href="{{ route('product.edit', ['id' => $model->product_id]) }}" class="btn btn-secondary">
+                            <a href="{{ route('product.edit', ['id' => $model->product_id]) }}" class="btn btn-outline-secondary">
                                 <i class="bi bi-arrow-left-circle"></i> {{ __('Back') }}
                             </a>
                         </div>
 
                         <div class="mx-1">
                             <div class="text-end">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-outline-primary">
                                     <i class="bi bi-arrow-clockwise"></i> {{ __('Update') }}
                                 </button>
                             </div>

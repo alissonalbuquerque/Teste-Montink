@@ -75,13 +75,13 @@
                     <div class="btn-group">
 
                         <div class="mx-1">
-                            <a href="{{ route('cupom.index') }}" class="btn btn-secondary">
+                            <a href="{{ route('cupom.index') }}" class="btn btn-outline-secondary">
                                 <i class="bi bi-arrow-left-circle"></i> {{ __('Back') }}
                             </a>
                         </div>
 
                         <div class="mx-1">
-                            <button type="submit" class="btn btn-success">
+                            <button type="submit" class="btn btn-outline-success">
                                 <i class="bi bi-plus-circle"></i> {{ __('Create') }}
                             </button>
                         </div>
