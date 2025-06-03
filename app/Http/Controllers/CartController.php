@@ -36,7 +36,7 @@ class CartController extends Controller
      */
     public function order(Request $request)
     {
-        $orders = $request->get('orders', []);
+        $orders = $request->get('items', []);
 
         $collection = !empty($orders) ? Collection::make($orders)->map(fn(array $data) => VirtualProduct::create($data)) : Collection::make([]);
 

@@ -11,12 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table)
+        {
             $table->id();
+            $table->foreignId('cupom_id')->nullable()->constrained('coupons');
+            $table->string('email');
+            $table->decimal('cupom');
+            $table->decimal('frete');
+            $table->decimal('subtotal');
+            $table->decimal('buy');
             $table->string('status')->default('pending');
-            $table->decimal('total_price');
-            $table->string('payment_method');
+            $table->string('payment_method')->default('card');
             $table->timestamps();
+            $table->softDeletes(); 
         });
     }
 

@@ -26,10 +26,10 @@
                     @foreach ($collection as $vproduct)
 
                         @if(!$loop->last) 
-                            <input type="hidden" name="orders[{{$vproduct->variant->id}}][variant_id]" value="{{$vproduct->variant->id}}">
-                            <input type="hidden" name="orders[{{$vproduct->variant->id}}][price]"      value="{{$vproduct->price}}">
-                            <input type="hidden" name="orders[{{$vproduct->variant->id}}][units]"      value="{{$vproduct->units}}">
-                            <input type="hidden" name="orders[{{$vproduct->variant->id}}][subtotal]"   value="{{$vproduct->subtotal}}">
+                            <input type="hidden" name="items[{{$vproduct->variant->id}}][variant_id]" value="{{$vproduct->variant->id}}">
+                            <input type="hidden" name="items[{{$vproduct->variant->id}}][price]"      value="{{$vproduct->price}}">
+                            <input type="hidden" name="items[{{$vproduct->variant->id}}][units]"      value="{{$vproduct->units}}">
+                            <input type="hidden" name="items[{{$vproduct->variant->id}}][subtotal]"   value="{{$vproduct->subtotal}}">
                         @endif
                         
                     @endforeach
@@ -38,7 +38,7 @@
 
                         <div class="mb-3">
                             <label for="email" class="form-label">{{__('Buy E-mail')}}</label>
-                            <input id="email" name="email" type="email" class="form-control @error('email') is-invalid @enderror" aria-describedby="buy.email" value="{{ old('email') }}">
+                            <input id="email" name="email" type="email" class="form-control @error('email') is-invalid @enderror" aria-describedby="buy.email" value="{{ old('email') }}" required>
                             @error('email')
                                  <div class="invalid-feedback"> {{$message}} </div>
                             @enderror

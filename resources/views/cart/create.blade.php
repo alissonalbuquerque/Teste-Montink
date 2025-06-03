@@ -16,10 +16,10 @@
                 @foreach ($collection as $vproduct)
 
                     @if(!$loop->last) 
-                        <input type="hidden" name="orders[{{$vproduct->variant->id}}][variant_id]" value="{{$vproduct->variant->id}}">
-                        <input type="hidden" name="orders[{{$vproduct->variant->id}}][price]"      value="{{$vproduct->price}}">
-                        <input type="hidden" name="orders[{{$vproduct->variant->id}}][units]"      value="{{$vproduct->units}}">
-                        <input type="hidden" name="orders[{{$vproduct->variant->id}}][subtotal]"   value="{{$vproduct->subtotal}}">
+                        <input type="hidden" name="items[{{$vproduct->variant->id}}][variant_id]" value="{{$vproduct->variant->id}}">
+                        <input type="hidden" name="items[{{$vproduct->variant->id}}][price]"      value="{{$vproduct->price}}">
+                        <input type="hidden" name="items[{{$vproduct->variant->id}}][units]"      value="{{$vproduct->units}}">
+                        <input type="hidden" name="items[{{$vproduct->variant->id}}][subtotal]"   value="{{$vproduct->subtotal}}">
                     @endif
                     
                 @endforeach

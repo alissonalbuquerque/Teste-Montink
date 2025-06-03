@@ -18,8 +18,14 @@
                 </div>
 
                 <div class="me-4">
-                    <a class="btn btn-sm btn-outline-primary" href="{{ route('cupom.index') }}">
+                    <a class="btn btn-sm btn-outline-primary" href="{{route('cupom.index')}}">
                         <i class="bi bi-ticket-perforated"></i> {{ __('Cupons') }}
+                    </a>
+                </div>
+
+                <div class="me-4">
+                    <a class="btn btn-sm btn-outline-primary" href="{{route('order.index')}}">
+                        <i class="bi bi-bag"></i> {{ __('Orders') }}
                     </a>
                 </div>
 

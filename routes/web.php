@@ -5,6 +5,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CepController;
 use App\Http\Controllers\CupomController;
 use App\Http\Controllers\FreteController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\VariantController;
 use Illuminate\Support\Facades\Route;
@@ -45,6 +46,7 @@ Route::prefix('buy')->group(function() {
     Route::get('create/{product_id}', [BuyController::class, 'create'])->name('buy.create');
     Route::post('store', [BuyController::class, 'store'])->name('buy.store');
     Route::post('order', [BuyController::class, 'order'])->name('buy.order');
+    Route::post('finish', [BuyController::class, 'finish'])->name('buy.finish');
 });
 
 Route::prefix('/cart')->group(function() {
@@ -58,4 +60,8 @@ Route::prefix('/cep')->group(function() {
 
 Route::prefix('/frete')->group(function() {
     Route::post('/calculate', [FreteController::class, 'calculate'])->name('frete.calculate');
+});
+
+Route::prefix('/order')->group(function() {
+    Route::get('/index', [OrderController::class, 'index'])->name('order.index');
 });

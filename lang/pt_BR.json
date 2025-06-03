@@ -66,12 +66,28 @@
 
     "Frete" : "Frete",
 
+    "Cofirm Datas" : "Confirmar Dados",
+
     "Buy E-mail" : "E-mail da Compra",
+
+    "E-mail : :content" : "E-mail : :content",
 
     "Close :action" : "Fechar :action",
     "Order" : "Pedido",
+    "Orders" : "Pedidos",
+
+    "Confirm Order" : "Confirmar Pedido",
 
     "Cupom (Code)" : "Cupom (Código)",
 
-    "Cupom (Discount)" : "Cupom (Desconto)"
+    "Cupom (Discount)" : "Cupom (Desconto)",
+
+    "Data" : "Dado",
+    
+    "Value" : "Valor",
+
+    "E-Mail" : "E-Mail",
+    "Cupom (Value)" : "Cupom (Valor)",
+
+    "Payment Method": "Método de Pagamento"
 }

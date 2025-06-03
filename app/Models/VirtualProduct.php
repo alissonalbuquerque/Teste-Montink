@@ -8,6 +8,8 @@ class VirtualProduct
 {   
     public ?Variant $variant;
 
+    public ?Product $product;
+
     public ?string $name;
 
     public ?float $price;
@@ -29,6 +31,7 @@ class VirtualProduct
         if(is_array($data))
         {
             $this->variant       = Variant::findOrFail($data['variant_id']);
+            $this->product       = $this->variant->product;
             $this->name          = $this->variant->product->name;
             $this->price         = $this->variant->price;
             $this->units         = $data['units'];
