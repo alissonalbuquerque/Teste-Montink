@@ -63,7 +63,7 @@ npm run dev
 ## Instruções
 
 - [x] Crie um banco de dados com 4 tabelas: pedidos, produtos, cupons, estoque
-⁠- [x] ⁠Crie uma tela simples, que permita a criação de produtos, com as seguintes informações: Nome, Preço, Variações e Estoque. O resultado do cadastro, deve gerar associações entre as tabelas produtos e estoques.
+- [x] ⁠Crie uma tela simples, que permita a criação de produtos, com as seguintes informações: Nome, Preço, Variações e Estoque. O resultado do cadastro, deve gerar associações entre as tabelas produtos e estoques.
 - [x] Permitir o cadastro de variações, e o controle de seus estoques, é um bônus.
 - [x] ⁠Na mesma tela, permita a opção de update dos dados do produto e do estoque.
 - [x] ⁠Com o produto salvo, adicione na mesma tela um botão de Comprar. Ao clicar nesse botão, gerencie um carrinho em sessão, controlando o estoque e valores do pedido. Caso o subtotal do pedido tenha entre R$52,00 e R$166,59, o frete do pedido deve ser R$15,00. Caso o subtotal seja maior que R$200,00, frete grátis. Para outros valores, o frete deve custar R$20,00.
