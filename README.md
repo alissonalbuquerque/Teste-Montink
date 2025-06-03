@@ -38,7 +38,6 @@ npm install
 ### Decripty .env
 ```
 php artisan env:decrypt --key="base64:Z+Y//bXhhZkYBExleVkiljkA1abYsCc6U8oCZRgeKQU="
-
 ```
 
 ### Rode as Migrations 
